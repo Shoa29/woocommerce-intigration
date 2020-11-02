@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<div class="container-fluid">
+<div class="header">
+    <img src="assets/Group 16777.svg">
+    <a (click)="userLogout()" style="color:grey;font-size:18px;float:right;margin-top:-2.5%;cursor:pointer;" [routerLink]="['/login']">Logout</a>
+</div>
+<img src="assets/Image 1.png">
+    <div class="form">
+        
+        <form [formGroup]="usereg" #f = "ngForm" (ngSubmit)="onSub(f.value)">
+      
+        <div class="form-group">
+          
+            <div class="form-group" >
+                
+            <input type="text" placeholder="Enter your website url" name="url" class="url" formControlName="url" [(ngModel)]="url"  >
+            <div class="line"></div>
+    
+        </div> 
+        <div class="form-group" >
+            
+            <input type="text" placeholder="Enter consumer key" name="cons_key" class="cons_key" formControlName="cons_key" [(ngModel)]="cons_key" >
+            <div class="line"></div>
+
+        </div>
+          <div class="form-group" >
+            
+            <input type="password" placeholder="Enter consumer secret" name="cons_scrt" class="cons_scrt" formControlName="cons_scrt" [(ngModel)]="cons_scrt" >
+            <div class="line"></div>
+        </div>
+        <a>Learn how to find your consumer key
+        <br> and consumer secret</a>
+          <input type="submit" name="submit" value="Connect" class="btn" (click)="onSub(f.value)">
+        </div>
+    </form></div></div>
+    

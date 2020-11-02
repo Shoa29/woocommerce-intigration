@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "unqueue-staging"
+  },
+  "targets": {
+    "unqueue-staging": {
+      "hosting": {
+        "connect": [
+          "firebase-app",
+          "unqueue-staging"
+        ]
+      }
+    }
+  }
+}
